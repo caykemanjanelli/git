@@ -45,11 +45,9 @@ Exemplo de utilização do Comando:
 ```sh
 $ git outgoing
 
-f0c56b4 - Diego Luisi -  (origin/develop) [openshift] reduce memory request 100 to 50 - 2 days ago
+70b03cc - Cayke Xavier -  (HEAD -> master) docs: Incluindo explicações dos alias usados - 6 seconds ago
 
 ```
-
-        
 
 **Configuração:**
 
