@@ -1,4 +1,4 @@
-## Configurando `Alias` no .gitconfig
+## Configurando `Alias` no [.gitconfig]
 
 O Alias no Git é uma função muito pratica para melhorar a produtividade dos desenvolvedores.
 
@@ -92,5 +92,7 @@ $ vim ~/.gitconfig
         hs = "!f() { git checkout develop && git pull && git checkout master && git pull && git flow hotfix start \"$1\"; }; f"
         # hf = flow hotfix finish
 ```
+
+[.gitconfig]: <.gitconfig>
 
 ## Referencias:
