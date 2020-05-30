@@ -2,7 +2,7 @@
 
 ### PROPÓSITO
 
-> Compartilhar comandos e dicas faceis e rapidas.
+> Compartilhar comandos e algumas dicas rapidas e faceis de usar.
 
 ## Configurações :
 [Arquivo de Configuraçoes do Git]
