@@ -1,4 +1,4 @@
-## Configurando `Alias` no .gitconfig
+## Configurando `Alias` no [.gitconfig]
 
 O Alias no Git é uma função muito pratica para melhorar a produtividade dos desenvolvedores.
 
@@ -46,12 +46,12 @@ Exemplo de utilização do Comando:
 $ git outgoing
 
 70b03cc - Cayke Xavier -  (HEAD -> master) docs: Incluindo explicações dos alias usados - 6 seconds ago
-
 ```
 
 **Configuração:**
 
-Acesse o terminal e edite o arquivo .gitconfig
+Para configurar os Alias no seu git local, acesse o terminal e edite o arquivo .gitconfig executando o comando abaixo:
+Abra o terminal/gitBash:
 ```sh
 $ vim ~/.gitconfig
 ```
@@ -93,4 +93,9 @@ $ vim ~/.gitconfig
         # hf = flow hotfix finish
 ```
 
+[.gitconfig]: <.gitconfig>
+
 ## Referencias:
+- Diego RocketSet, https://www.youtube.com/watch?v=VpeU3VpszAc 
+- Comandos Git Flow: https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+- 
