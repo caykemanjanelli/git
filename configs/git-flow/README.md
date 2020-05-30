@@ -6,7 +6,7 @@
 
 ### **Branchs Padrões** (develop e master)
 
-![Branchs Padroes](/configs/git-flow/images/estrutura_base.png)
+![Branchs Padroes](/configs/git-flow/images/estrutura_base.PNG)
 
 >**Master**: 
 Contem todo código já testado e versionado que será entregue ao cliente.
