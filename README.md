@@ -11,8 +11,6 @@ Usando alias no git:
 
 [Passo a passo]: <configs/README.md>
 
-Usando Git Flow:
-
-Primeiros Passos: [Primeiros passos](git-flow/README.md)
+Usando Git Flow: [Primeiros passos](git-flow/README.md)
 
 ## Referencias:
