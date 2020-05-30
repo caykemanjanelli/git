@@ -1,14 +1,53 @@
 # Principais comando para utilizar Git-Flow
 
->O git flow se trata de padrão de desenvolvimento, onde é muito utilizado por equipes que trabalham em um mesmo projeto >simultaneamente. Com isso, ao utilizar um padrão de desenvolvimento evitamos `"acidentes"` entre as `branchs` do projeto.
+>O `git flow` se trata de padrão de desenvolvimento, onde é muito utilizado por equipes que trabalham em um mesmo projeto >simultaneamente. Com isso, ao utilizar um padrão de desenvolvimento evitamos `"acidentes"` entre as `branchs` do projeto.
 
 ## Um pouco sobre a estrutura que o Git Flow segue:
 
-### Branchs Padrões (develop e master)
+### **Branchs Padrões** (develop e master)
 
-![estutura_base] (/images/estrutura_base.PNG)
+![Branchs Padrao](/configs/git-flow/images/estrutura_base.png)
 
-### Primeiros comandos :simple_smile:: 
+>**Master**: 
+Contem todo código já testado e versionado que será entregue ao cliente.
+Réplica dos objetos de produção
+
+>**Develop**: 
+Branch do Desenvolvedor, contem o código mais atual desenvolvido.
+Onde as outras branchs serão ramificadas tendo ela como base no momento da criação do "ramo".
+
+### **Branch Feature**
+
+![Branchs Feature](/configs/git-flow/images/branch_feature.png)
+
+>**Feature**: 
+É o ramo do fluxo criado para desenvolver `novas funcionalidades` para a aplicação ou para iniciar uma modificação da aplicação. Essa branch inicia de uma copia da branch `develop` e quando é concluída, ela é mesclada na `develop` novamente.
+
+### **Branch Release**
+
+![Branchs Release](/configs/git-flow/images/branch_release.png)
+
+>**Release**: 
+É o ramo do fluxo criado para `novas implementações` previamente `testadas` e `validadas`. 
+A release é uma das únicas branches que mescla com a `master`.
+
+## **Branch Hotfix**
+
+![Branchs Hotfix](/configs/git-flow/images/branch_hotfix.png)
+
+>**Hotfix**: 
+É o ramo do fluxo criado para resolver `problemas críticos` em `produção` que não podem esperar novas releases.
+Criado a partir da `master` e quando concluído é mesclado com `a develop` e a `master`. Garantindo que tanto o codigo de `produção` quanto o codigo do `Desenvolvedor` possuam a mesma correção do "`Bug`" aplicada no hotfix.
+
+## **TAG**
+
+![Branchs Hotfix](/configs/git-flow/images/tag.png)
+
+>**TAG**: 
+Após a conclusão de uma `feature` e a criação d `release` para *implantação* do seu programa é a hora de usar uma `TAG` para controlar a versão da aplicação.
+A `TAG` pode ser comparada a um “`snapshot`” do código no momento de deploy na branch de produção (*master*). A `TAG` é criada automaticamente quando se finaliza uma `release` via `git flow` e ela ira receber o mesmo nome da `release` previamente finalizada.
+
+## Primeiros comandos: 
 
 **Iniciando um Repositorio como Git Flow**
 
