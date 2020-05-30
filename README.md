@@ -5,8 +5,14 @@
 > Compartilhar comandos e dicas faceis e rapidas.
 
 ## Configurações :
-[Arquivo de Configuraçoes do Git]
 
-[Arquivo de Configuraçoes do Git]: <configs/README.md>
+Usando alias no git:
+[Passo a passo]
+
+[Passo a passo]: <configs/README.md>
+
+Usando Git Flow:
+
+[Primeiros passos]: <configs/git-flow/README.md>
 
 ## Referencias:

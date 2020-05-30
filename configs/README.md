@@ -262,23 +262,10 @@ $ vim ~/.gitconfig
         rollback = reset --soft HEAD~1
         who = shortlog -n -s --no-merges
         say = "!f() { msg=${1-Hello World}; echo $msg;  }; f"
-          ### Comandos Git Flow ###
-        # fs = (git checkout develop && git pull && flow feature start)
-        fs = "!f() { git checkout develop && git pull && git flow feature start \"$1\"; }; f"
-        # fs = (git checkout develop && git pull && flow feature finish)
-        ff = "!f() { git checkout develop && git pull && git flow feature finish \"$1\" && git push; }; f"
-        #rs = flow release start
-        rs = "!f() { git checkout develop && git pull && git flow release start \"$1\"; }; f"
-        #rf = flow release finish
-        rf ="!f() { git checkout develop && git pull && git checkout master && git pull && git flow release finish \"$1\" && git push && git checkout master && git push && git push --tag && git checkout develop; }; f"
-        # hs = flow hotfix start
-        hs = "!f() { git checkout develop && git pull && git checkout master && git pull && git flow hotfix start \"$1\"; }; f"
-        # hf = flow hotfix finish
 ```
 
 [.gitconfig]: <.gitconfig>
 
 ## Referencias:
 - Diego RocketSet, https://www.youtube.com/watch?v=VpeU3VpszAc 
-- Comandos Git Flow: https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 - 
