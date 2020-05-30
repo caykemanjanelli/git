@@ -4,6 +4,27 @@ O Alias no Git é uma função muito pratica para melhorar a produtividade dos d
 
 ### Comandos: 
 
+**- git cb**
+
+Comando para criar uma branch e já realizar o checkout da branch criada. 
+
+Exemplo do Comando:
+```sh
+$ git cb feature/performance
+Switched to a new branch 'feature/performance'
+```
+
+
+```sh
+[alias]
+        cb = checkout -b
+```
+Exemplo de utilização do alias:
+```sh
+$ git cb feature/performance
+Switched to a new branch 'feature/performance'
+```
+
 **- git lg**
 
 Comando para listar os Logs de commit com o id mnemônico do commit, a quanto tempo foi commitado, nome do Dev, subject do commit. 
@@ -47,6 +68,23 @@ $ git outgoing
 
 70b03cc - Cayke Xavier -  (HEAD -> master) docs: Incluindo explicações dos alias usados - 6 seconds ago
 ```
+**- git who**
+
+Comando para listar as ultimas pessoas que alteraram o projeto e a quantidade de linhas alteradas. 
+```sh
+[alias]
+        who = shortlog -n -s --no-merges
+```
+Exemplo de utilização do Comando:
+```sh
+$ git who
+    87  Cayke Manjanelli
+    24  Ricardo Silva
+    13  Cayke Xavier
+     6  Jefferson Costa
+     5  João Carvalho
+```
+
 
 **Configuração:**
 
