@@ -6,7 +6,7 @@
 
 ### **Branchs Padrões** (develop e master)
 
-![Branchs Padroes](/configs/git-flow/images/estrutura_base.PNG)
+![Branchs Padroes](/git-flow/images/estrutura_base.PNG)
 
 >**Master**: 
 Contem todo código já testado e versionado que será entregue ao cliente.
@@ -18,14 +18,14 @@ Onde as outras branchs serão ramificadas tendo ela como base no momento da cria
 
 ### **Branch Feature**
 
-![Branchs Feature](/configs/git-flow/images/branch_feature.png)
+![Branchs Feature](/git-flow/images/branch_feature.png)
 
 >**Feature**: 
 É o ramo do fluxo criado para desenvolver `novas funcionalidades` para a aplicação ou para iniciar uma modificação da aplicação. Essa branch inicia de uma copia da branch `develop` e quando é concluída, ela é mesclada na `develop` novamente.
 
 ### **Branch Release**
 
-![Branchs Release](/configs/git-flow/images/branch_release.png)
+![Branchs Release](/git-flow/images/branch_release.png)
 
 >**Release**: 
 É o ramo do fluxo criado para `novas implementações` previamente `testadas` e `validadas`. 
@@ -33,7 +33,7 @@ A release é uma das únicas branches que mescla com a `master`.
 
 ## **Branch Hotfix**
 
-![Branchs Hotfix](/configs/git-flow/images/branch_hotfix.png)
+![Branchs Hotfix](/git-flow/images/branch_hotfix.png)
 
 >**Hotfix**: 
 É o ramo do fluxo criado para resolver `problemas críticos` em `produção` que não podem esperar novas releases.
@@ -41,7 +41,7 @@ Criado a partir da `master` e quando concluído é mesclado com `a develop` e a
 
 ## **TAG**
 
-![Branchs Hotfix](/configs/git-flow/images/tag.png)
+![Branchs Hotfix](/git-flow/images/tag.png)
 
 >**TAG**: 
 Após a conclusão de uma `feature` e a criação d `release` para *implantação* do seu programa é a hora de usar uma `TAG` para controlar a versão da aplicação.
