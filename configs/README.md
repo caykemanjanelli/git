@@ -4,16 +4,87 @@ O Alias no Git é uma função muito pratica para melhorar a produtividade dos d
 
 ### Comandos: 
 
+**- git ca**
+
+Comando para adicionar os arquivo alterados na stage do git e para commitar as alterações. 
+
+Exemplo do Comando:
+```sh
+$ git add .
+$ git commit -m "fix: Arrumando bug de conexão"
+```
+Agora adicionando o alias no arquivo de .gitconfig:
+
+```sh
+[alias]
+        ca = !git add . && git commit -m
+```
+Exemplo de utilização do alias:
+```sh
+$ git ca "fix: Arrumando bug de conexão"
+```
+**- git st**
+
+Comando para exibir o status do arquivos na sua Work tree do Git, um alias. 
+
+Exemplo do Comando:
+```sh
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   configs/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+Agora adicionando o alias no arquivo de .gitconfig:
+
+```sh
+[alias]
+        st = status -sb
+```
+Exemplo de utilização do alias:
+```sh
+$ git st
+## master...origin/master
+ M configs/README.mds
+```
+
 **- git cb**
 
 Comando para criar uma branch e já realizar o checkout da branch criada. 
 
 Exemplo do Comando:
 ```sh
+$ git branch feature/performance
+$ git checkout feature/performance
+Switched to a new branch 'feature/performance'
+```
+Agora adicionando o alias no arquivo de .gitconfig:
+
+```sh
+[alias]
+        cb = checkout -b
+```
+Exemplo de utilização do alias:
+```sh
 $ git cb feature/performance
 Switched to a new branch 'feature/performance'
 ```
+**- git sf**
 
+Comando exibir detalhes de um commit, de uma forma mais simples, contendo apenas os arquivos quer foram modificados no commit informado. 
+
+Exemplo do Comando:
+```sh
+$ git branch feature/performance
+$ git checkout feature/performance
+Switched to a new branch 'feature/performance'
+```
+Agora adicionando o alias no arquivo de .gitconfig:
 
 ```sh
 [alias]
