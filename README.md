@@ -13,6 +13,6 @@ Usando alias no git:
 
 Usando Git Flow:
 
-[Primeiros passos]: <git-flow/README.md>
+Primeiros Passos: [Primeiros passos](git-flow/README.md)
 
 ## Referencias:
