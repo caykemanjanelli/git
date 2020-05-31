@@ -198,37 +198,11 @@ $ echo "Abrindo um novo Hotfix"
 $ git flow hotfix start 0.1.3
 $ git flow hotfix finish 0.1.3
 ```
+##Dicas:
 
-**Configuração:**
+Os comando de `git flow` já são um conjunto de `alias` para reduzir a quantidade de comando a serem executados para respeitar o `fluxo` proposto. Mesmo assim são muitos comandos para digitar ou até lembrar, com isso resolvi criar alguns alias dos comandos de `git flow`. 
 
-Para configurar os Alias no seu git local, acesse o terminal e edite o arquivo .gitconfig executando o comando abaixo:
-Abra o terminal/gitBash:
-```sh
-$ vim ~/.gitconfig
-```
-
-```sh
-[user]
-        name = Seu Nome
-        email = seu.email@email.com
-
-[alias]
-          ### Comandos Git Flow ###
-        # fs = (git checkout develop && git pull && flow feature start)
-        fs = "!f() { git checkout develop && git pull && git flow feature start \"$1\"; }; f"
-        # fs = (git checkout develop && git pull && flow feature finish)
-        ff = "!f() { git checkout develop && git pull && git flow feature finish \"$1\" && git push; }; f"
-        #rs = flow release start
-        rs = "!f() { git checkout develop && git pull && git flow release start \"$1\"; }; f"
-        #rf = flow release finish
-        rf ="!f() { git checkout develop && git pull && git checkout master && git pull && git flow release finish \"$1\" && git push && git checkout master && git push && git push --tag && git checkout develop; }; f"
-        # hs = flow hotfix start
-        hs = "!f() { git checkout develop && git pull && git checkout master && git pull && git flow hotfix start \"$1\"; }; f"
-        # hf = flow hotfix finish
-```
-
-[.gitconfig]: <.gitconfig>
+[Alias git flow](README-ALIAS.md) 
 
 ## Referencias:
-- Comandos Git Flow: https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
-- 
+- Comandos Git Flow: https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow 
