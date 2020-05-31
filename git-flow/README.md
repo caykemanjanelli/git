@@ -169,6 +169,35 @@ $ git branch -a
  develop
  master
 ```
+**`Hotfix` - Criando uma nova Branch para correção de BUG**
+
+Branch de `correção de Bug`, uma branch aberta para `correção` de alguma `problema` encontrado em `produção`, como se trata de algo pontual que muitas vezes não se caracteriza como uma nova funcionalidade, podemos abrir uma branch de `hotfix`, onde ela ira nascer de uma copia da branch `master` e ao finalizar ira *mergiar* com a branch `master` e `develop`, garantindo que a correção tambem esteja presente na branch do `desenvolvedor`.
+Como na branch `release`, ao abrir um `hotfix` é criado uma `tag` do codigo que esta sendo implantado.
+Usando a mesma dinamica anterior, é preciso garantir que o seu repositorio `local` esteja com a ultima versão do codigo presente no repositorio `remoto`, para isso execute o comando abaixo:
+
+Abra o terminal/gitbash ou qualquer gerenciador que estive usando e execute os comandos abaixo:
+
+```sh
+$ git checkout master 
+$ git pull
+$ git checkout develop 
+$ git pull
+```
+Antes de abrir um `hotfix` pode-se validar quais foram as ultimas `tags` implantadas para que com isso possamos seguir uma logica de criação das versões.
+
+```sh
+$ git tag
+ 0.0.1
+ 0.0.2
+ 0.0.3
+```
+Após atualzado o repositorio local, podemos seguir com a abertura do novo `hotfix`, para isso execute os comandos abaixo: 
+
+```sh
+$ echo "Abrindo um novo Hotfix"
+$ git flow hotfix start 0.1.3
+$ git flow hotfix finish 0.1.3
+```
 
 **Configuração:**
 
