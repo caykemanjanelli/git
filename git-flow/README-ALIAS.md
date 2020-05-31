@@ -177,8 +177,7 @@ $ vim ~/.gitconfig
         hs = "!f() { git checkout develop && git pull && git checkout master && git pull && git flow hotfix start \"$1\"; }; f"
         # hf = flow hotfix finish
 ```
-
-[.gitconfig]: <.gitconfig>
+Arquivo de .gitconfig: [.gitconfig](.gitconfig)
 
 ## Referencias:
 - Comandos Git Flow: https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
