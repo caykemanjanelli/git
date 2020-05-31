@@ -91,6 +91,85 @@ Branch name for production releases: [] master
 ...
 ```
 
+**`Feature` - Criando uma nova Branch para desenvolvimento**
+
+Branch de `desenvolvimento`, uma branch aberta para desenvolver novas funcionalidades para a aplicação, quando aberta ela ira fazer uma copia da `branch develop` e quando finalizada o codigo volta via merge para a branch `develop`, para isso é preciso ter garantido que o seu git `local` esteja atualizado com a ultima versão do repositorio `remoto`.
+
+Abra o terminal/gitbash ou qualquer gerenciador que estive usando e execute os comandos abaixo:
+
+```sh
+$ echo "Atualizando sua branch local"
+$ git checkout develop
+$ git pull
+```
+Comando para iniciar uma nova feature:
+
+```sh
+$ echo "Abrindo uma nova Feature, um novo desenvolvimento"
+$ git flow feature start nova-funcionalidade
+$ echo "Trabalhe no desenvolvimento e no termino do mesmo, após homologado e pronto para implantação execute o comando abaixo"
+$ git add .
+$ git commit -m "<Mensagem descritiva do foi desenvolvido>"
+$ git flow feature finish nova-funcionalidade
+```
+Para garantir que a feature foi finalizada com sucesso execute o comando abaixo, o mesmo não devera retornar a feature fechada
+
+```sh
+$ git branch -a
+ develop
+ master
+```
+Não esqueça que o `git flow` é uma funcionalidade `local`, devido a isso é preciso sempre que finalizado uma branch persistir a mesma no `repositorio remoto`, com o comando abaixo:
+
+ ```sh
+$ git checkout develop
+$ git push
+```
+
+**`Release` - Criando uma nova Branch para Deploy da Aplicação**
+
+Branch de *`Deploy`*, uma branch aberta para implantação das novas funcionalidades. A branch `release` acaba sendo o caminho que se passa via `git flow` para implantação de um novo conjunto de funcionalidades desenvolvidas por `features` passadas que ja foram finalizadas e *mergiadas* para a `develop`.
+A branch `release` ao ser aberta realiza uma `copia` da branch `develop` e ao ser finalizada ela realiza um merge com a branch `master` e `develop` novamente, criando também uma `tag` do pacote que esta sendo implantado.
+Usando a mesma dinamica antes de iniciar uma feature, é preciso garantir que o seu repositorio `local` esteja com a ultima versão do codigo presente no repositorio `remoto`, para isso execute o comando abaixo:
+
+Abra o terminal/gitbash ou qualquer gerenciador que estive usando e execute os comandos abaixo:
+
+```sh
+$ git checkout master 
+$ git pull
+$ git checkout develop 
+$ git pull
+```
+Antes de abrir uma `release` pode-se validar quais foram as ultimas "`releases`" implantadas, pois como ao finalizar a release o `git flow` abre uma `tag` automaticamente com o nome que foi dada na `release`, execute o comando abaixo para validar as `tags` existentes.
+
+```sh
+$ git tag
+ 0.0.1
+ 0.0.2
+```
+Após validado as tags existentes, podemos seguir com a abertura da nova `release`, para isso execute os comandos abaixo: 
+
+```sh
+$ echo "Abrindo uma nova release"
+$ git flow release start 0.0.3
+$ git flow release finish 0.0.3
+```
+Agora precisamos atualizar o repositorio `remoto`, para isso execute o comando abaixo:
+```sh
+$ git checkout master 
+$ git push
+$ git push --tag
+$ git checkout develop 
+$ git push
+```
+Para garantir que a feature foi finalizada com sucesso execute o comando abaixo, o mesmo não devera retornar a feature fechada
+
+```sh
+$ git branch -a
+ develop
+ master
+```
+
 **Configuração:**
 
 Para configurar os Alias no seu git local, acesse o terminal e edite o arquivo .gitconfig executando o comando abaixo:
