@@ -1,3 +1,6 @@
+[user]
+        name = Seu Nome
+        email = seu.email@email.com
 [alias]
 	  ### Comandos Git Flow ###
 	# fs = (git checkout develop && git pull && flow feature start)

@@ -1,3 +1,6 @@
+[user]
+        name = Seu Nome
+        email = seu.email@email.com
 [alias]
 	ci = commit
 	ca = !git add . && git commit -m
