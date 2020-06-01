@@ -6,7 +6,7 @@
 
 ### **Branchs Padrões** (develop e master)
 
-![Branchs Padroes](/git-flow/images/estrutura_base.png)
+![estrutura_base](/git-flow/images/estrutura_base.png)
 
 >**Master**: 
 Contem todo código já testado e versionado que será entregue ao cliente.
@@ -18,14 +18,14 @@ Onde as outras branchs serão ramificadas tendo ela como base no momento da cria
 
 ### **Branch Feature**
 
-![Branchs Feature](/git-flow/images/branch_feature.png)
+![Branchs_Feature](/git-flow/images/branch_feature.png)
 
 >**Feature**: 
 É o ramo do fluxo criado para desenvolver `novas funcionalidades` para a aplicação ou para iniciar uma modificação da aplicação. Essa branch inicia de uma copia da branch `develop` e quando é concluída, ela é mesclada na `develop` novamente.
 
 ### **Branch Release**
 
-![Branchs Release](/git-flow/images/branch_release.png)
+![branch_release](/git-flow/images/branch_release.png)
 
 >**Release**: 
 É o ramo do fluxo criado para `novas implementações` previamente `testadas` e `validadas`. 
@@ -33,7 +33,7 @@ A release é uma das únicas branches que mescla com a `master`.
 
 ## **Branch Hotfix**
 
-![Branchs Hotfix](/git-flow/images/branch_hotfix.png)
+![branch_hotfix](/git-flow/images/branch_hotfix.png)
 
 >**Hotfix**: 
 É o ramo do fluxo criado para resolver `problemas críticos` em `produção` que não podem esperar novas releases.
@@ -41,7 +41,7 @@ Criado a partir da `master` e quando concluído é mesclado com `a develop` e a
 
 ## **TAG**
 
-![Branchs Hotfix](/git-flow/images/tag.png)
+![tag](/git-flow/images/tag.png)
 
 >**TAG**: 
 Após a conclusão de uma `feature` e a criação d `release` para *implantação* do seu programa é a hora de usar uma `TAG` para controlar a versão da aplicação.
@@ -123,7 +123,7 @@ Não esqueça que o `git flow` é uma funcionalidade `local`, devido a isso é p
 
  ```sh
 $ git checkout develop
-$ git push
+$ git push --set-upstream origin develop
 ```
 
 **`Release` - Criando uma nova Branch para Deploy da Aplicação**
@@ -157,7 +157,7 @@ $ git flow release finish 0.0.3
 Agora precisamos atualizar o repositorio `remoto`, para isso execute o comando abaixo:
 ```sh
 $ git checkout master 
-$ git push
+$ git push --set-upstream origin master
 $ git push --tag
 $ git checkout develop 
 $ git push
