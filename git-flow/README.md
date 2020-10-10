@@ -5,8 +5,9 @@
 ## Um pouco sobre a estrutura que o Git Flow segue:
 
 ### **Branchs Padrões** (develop e master)
-
-![estrutura_base](/git-flow/images/estrutura_base.jpg)
+</p>
+<img src = "https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/estrutura_base.jpg">
+</p>
 
 >**Master**: 
 Contem todo código já testado e versionado que será entregue ao cliente.
