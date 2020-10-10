@@ -9,9 +9,6 @@
 <img src = "https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/estrutura_base.jpg">
 </p>
 
-Sem html
-![](https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/estrutura_base.jpg)
-
 >**Master**: 
 Contem todo código já testado e versionado que será entregue ao cliente.
 Réplica dos objetos de produção
