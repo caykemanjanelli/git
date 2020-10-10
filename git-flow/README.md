@@ -1,6 +1,6 @@
 # Principais comando para utilizar Git-Flow
 
->O `git flow` se trata de padrão de desenvolvimento, onde é muito utilizado por equipes que trabalham em um mesmo projeto >simultaneamente. Com isso, ao utilizar um padrão de desenvolvimento evitamos `"acidentes"` entre as `branchs` do projeto.
+>O `git flow` se trata de padrão de desenvolvimento, onde é muito utilizado por equipes que trabalham em um mesmo projeto simultaneamente. Com isso, ao utilizar um padrão de desenvolvimento evitamos `"acidentes"` entre as `branchs` do projeto.
 
 ## Um pouco sobre a estrutura que o Git Flow segue:
 
@@ -19,14 +19,18 @@ Onde as outras branchs serão ramificadas tendo ela como base no momento da cria
 
 ### **Branch Feature**
 
-![Branchs_Feature](/git-flow/images/branch_feature.png)
+</p>
+<img src = "https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/branch_feature.png">
+</p>
 
 >**Feature**: 
 É o ramo do fluxo criado para desenvolver `novas funcionalidades` para a aplicação ou para iniciar uma modificação da aplicação. Essa branch inicia de uma copia da branch `develop` e quando é concluída, ela é mesclada na `develop` novamente.
 
 ### **Branch Release**
 
-![branch_release](/git-flow/images/branch_release.png)
+</p>
+<img src = "https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/branch_release.png">
+</p>
 
 >**Release**: 
 É o ramo do fluxo criado para `novas implementações` previamente `testadas` e `validadas`. 
@@ -34,7 +38,9 @@ A release é uma das únicas branches que mescla com a `master`.
 
 ## **Branch Hotfix**
 
-![branch_hotfix](/git-flow/images/branch_hotfix.png)
+</p>
+<img src = "https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/branch_hotfix.png">
+</p>
 
 >**Hotfix**: 
 É o ramo do fluxo criado para resolver `problemas críticos` em `produção` que não podem esperar novas releases.
@@ -42,7 +48,9 @@ Criado a partir da `master` e quando concluído é mesclado com `a develop` e a
 
 ## **TAG**
 
-![tag](/git-flow/images/tag.png)
+</p>
+<img src = "https://raw.githubusercontent.com/caykemanjanelli/git/master/git-flow/images/tag.png">
+</p>
 
 >**TAG**: 
 Após a conclusão de uma `feature` e a criação d `release` para *implantação* do seu programa é a hora de usar uma `TAG` para controlar a versão da aplicação.
